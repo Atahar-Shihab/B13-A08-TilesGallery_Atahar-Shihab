@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /my-profile/
+
+Sitemap: https://tiles-gallery.vercel.app/sitemap.xml
