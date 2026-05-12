@@ -1,171 +1,163 @@
+<div align="center">
+
 # 🧱 Tiles Gallery
 
-A beautifully crafted tile gallery web application built with Next.js, featuring authentication, a curated collection browser, and artisan tile details.
+> **Discover Your Perfect Aesthetic.** <br />
+> A beautifully crafted, premium tile gallery web application featuring seamless authentication, a curated collection browser, and artisan tile details.
 
-🔗 **Live URL:** [https://tiles-gallery.vercel.app](https://tiles-gallery.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![NextAuth](https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://next-auth.js.org/)
+
+**[🔗 View Live Application](https://tiles-gallery.vercel.app)** • **[🐛 Report Bug](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)** • **[✨ Request Feature](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)**
+
+</div>
 
 ---
 
 ## ✨ Key Features
 
-- **Home Page** — Hero banner with "Discover Your Perfect Aesthetic", animated marquee, and top 4 featured tiles
-- **All Tiles Gallery** — Search by title/material/tag, filter by category, sort by price/name
-- **Tile Details** — Full details page with high-res image, specs, tags, and creator info (private route)
-- **Authentication** — Email/password login & registration + Google OAuth via NextAuth.js
-- **My Profile** — View logged-in user data with avatar display
-- **Update Profile** — Update name and profile photo URL with live preview
-- **Responsive Design** — Fully responsive on mobile, tablet, and desktop
-- **Protected Routes** — Tile details and profile require authentication
-- **Loading States** — Skeleton loaders on data fetching
-- **Custom 404** — Beautiful not-found page
-- **Toast Notifications** — Success/error feedback throughout the app
-- **SwiperJS Integration** — Used for tile showcase carousel
+*   **Premium Homepage:** Immersive hero banner, smooth animated marquee, and a dynamic showcase of top featured tiles.
+*   **Comprehensive Gallery:** Advanced search by title, material, or tag. Filter by category and sort by price or name to find the exact aesthetic you need.
+*   **Artisan Details:** Dedicated pages for each tile featuring high-resolution imagery, specifications, tags, and creator information.
+*   **Seamless Authentication:** Secure login and registration using Email/Password or 1-click **Google OAuth**, powered by NextAuth.js.
+*   **User Profiles:** Personalized dashboards to view user data, update display names, and change profile photos with live previews.
+*   **Protected Routes:** Rock-solid middleware securing private routes (details and profiles) from unauthenticated access.
+*   **Polished UI/UX:** Fully responsive design across all devices, sleek skeleton loaders, toast notifications for instant feedback, and a custom interactive SwiperJS carousel.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Packages
 
-- **Framework:** Next.js 15 (App Router)
-- **Styling:** Tailwind CSS
-- **Authentication:** NextAuth.js v4
-- **Database:** MongoDB (via @auth/mongodb-adapter)
-- **Data Server:** JSON Server
-- **Fonts:** Cormorant Garamond, DM Sans, DM Mono (Google Fonts)
+### Core Architecture
+*   **Framework:** Next.js 15 (App Router)
+*   **Styling:** Tailwind CSS (Minimalist & Clean spacing)
+*   **Database:** MongoDB native driver & Mongoose
+*   **Data Server:** JSON Server (Mock REST API)
 
----
-
-## 📦 npm Packages Used
-
+### Key Dependencies
 | Package | Purpose |
-|---|---|
-| `next-auth` | Authentication (credentials + Google OAuth) |
-| `@auth/mongodb-adapter` | MongoDB adapter for NextAuth |
-| `mongodb` | MongoDB native driver |
-| `mongoose` | MongoDB ODM |
-| `bcryptjs` | Password hashing |
-| `react-hot-toast` | Toast notifications |
-| `react-fast-marquee` | Animated scrolling marquee |
-| `swiper` | Touch slider/carousel (Challenge requirement) |
-| `lucide-react` | Icons |
-| `json-server` | Mock REST API for tile data |
+| :--- | :--- |
+| `next-auth` | Secure authentication (Credentials + Google) |
+| `@auth/mongodb-adapter` | Seamless DB integration for NextAuth |
+| `bcryptjs` | Cryptographic password hashing |
+| `swiper` | Touch-enabled slider/carousel |
+| `react-fast-marquee` | Smooth infinite scrolling elements |
+| `react-hot-toast` | Elegant non-blocking notifications |
+| `lucide-react` | Crisp, modern iconography |
 
 ---
 
 ## 🚀 Getting Started
 
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing.
+
 ### Prerequisites
-- Node.js 18+
-- MongoDB Atlas account (or local MongoDB)
-- Google OAuth credentials (for Google login)
+*   Node.js 18+
+*   MongoDB Atlas cluster (or local instance)
+*   Google Cloud Console account (for OAuth credentials)
 
 ### Installation
 
+**1. Clone the repository**
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/tiles-gallery.git
+git clone [https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab.git](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab.git)
 cd tiles-gallery
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.local.example .env.local
-# Edit .env.local with your credentials
 ```
 
-### Environment Variables
+**2. Install dependencies**
+```bash
+npm install --legacy-peer-deps
+```
 
-Create a `.env.local` file:
-
+**3. Configure Environment Variables**
+Create a `.env.local` file in the root directory and add your keys:
 ```env
-MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/tiles-gallery
-NEXTAUTH_SECRET=your_secret_key
+# Database
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/tiles-gallery
+
+# NextAuth
+NEXTAUTH_SECRET=your_super_secret_key
 NEXTAUTH_URL=http://localhost:3000
+
+# Google OAuth
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-NEXT_PUBLIC_API_URL=https://tiles-gallery-server-2.onrender.com/tiles
+
+# Local API
+NEXT_PUBLIC_API_URL=http://localhost:5000
 ```
 
-### Running the App
+**4. Spin up the Development Environment**
+You will need two terminal windows running simultaneously:
 
 ```bash
-# Terminal 1: Start the JSON server (tile data)
+# Terminal 1: Start the JSON data server
 npm run server
 
-# Terminal 2: Start the Next.js dev server
+# Terminal 2: Start the Next.js frontend
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📁 Project Structure
-
-```
-tiles-gallery/
-├── app/
-│   ├── (auth)/
-│   │   ├── login/          # Login page
-│   │   └── register/       # Registration page
-│   ├── all-tiles/          # Tile gallery with search & filter
-│   ├── tile/[id]/          # Single tile detail (private)
-│   ├── my-profile/
-│   │   ├── page.jsx        # Profile view (private)
-│   │   └── update/         # Update name & photo (private)
-│   ├── api/
-│   │   ├── auth/           # NextAuth handler
-│   │   ├── register/       # User registration endpoint
-│   │   └── update-profile/ # Profile update endpoint
-│   ├── layout.jsx          # Root layout with Navbar, Footer
-│   ├── page.jsx            # Home page
-│   └── not-found.jsx       # Custom 404 page
-├── components/
-│   ├── Navbar.jsx
-│   ├── Footer.jsx
-│   ├── TileCard.jsx
-│   └── LoadingSkeleton.jsx
-├── lib/
-│   ├── auth.js             # NextAuth configuration
-│   └── mongodb.js          # MongoDB connection
-├── data/
-│   └── db.json             # JSON Server database
-├── middleware.js            # Route protection
-└── .env.local               # Environment variables
-```
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ---
 
 ## 🚦 Route Permissions
 
-| Route | Access |
-|---|---|
-| `/` | Public |
-| `/all-tiles` | Public |
-| `/login` | Public |
-| `/register` | Public |
-| `/tile/[id]` | **Private** (requires login) |
-| `/my-profile` | **Private** (requires login) |
-| `/my-profile/update` | **Private** (requires login) |
+Security and routing are handled efficiently via Next.js App Router and NextAuth middleware.
+
+| Route | Access Level | Description |
+| :--- | :--- | :--- |
+| `/` | 🟢 **Public** | Landing page and hero showcase |
+| `/all-tiles` | 🟢 **Public** | Main searchable gallery |
+| `/login` | 🟢 **Public** | Authentication portal |
+| `/register` | 🟢 **Public** | Account creation |
+| `/tile/[id]` | 🔴 **Private** | Detailed specifications and creator info |
+| `/my-profile` | 🔴 **Private** | User dashboard |
+| `/my-profile/update` | 🔴 **Private** | Account settings and image updates |
 
 ---
 
-## 📸 Screenshots
+## 📁 Architecture Structure
 
-
----
-
-## 🔧 Deployment
-
-Deploy to Vercel:
-
-```bash
-vercel deploy
+```text
+tiles-gallery/
+├── app/
+│   ├── (auth)/             # Login & Registration flows
+│   ├── all-tiles/          # Gallery grid, search & filters
+│   ├── api/                # NextAuth, Registration, and Update endpoints
+│   ├── my-profile/         # Protected user dashboards
+│   ├── tile/[id]/          # Dynamic routing for individual tiles
+│   ├── layout.jsx          # Root layout (Navbar & Footer)
+│   ├── not-found.jsx       # Custom 404 error page
+│   └── page.jsx            # Landing page
+├── components/             # Reusable UI (Navbar, Footer, TileCards, Skeletons)
+├── data/                   # JSON Server mock database
+├── lib/                    # NextAuth config & MongoDB connection instances
+└── middleware.js           # Route protection logic
 ```
 
+---
+
+## 📸 Interface Preview
+
+*(Drop your screenshots here to show off the clean, premium aesthetic!)*
+<br>
+![Home Page Preview](https://via.placeholder.com/800x400.png?text=Home+Page+Screenshot)
+<br>
+![Gallery Preview](https://via.placeholder.com/800x400.png?text=Gallery+Search+%26+Filter+Screenshot)
+
+---
+
+## 👨‍💻 Author
+
+**Atahar Shihab**
+*   **GitHub:** [@Atahar-Shihab](https://github.com/Atahar-Shihab)
+*   **Email:** shihabatahar@gmail.com
 
 ---
 
 ## 📝 License
 
-© 2026 Tiles Gallery
+© 2026 Tiles Gallery. All Rights Reserved.
