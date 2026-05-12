@@ -14,7 +14,7 @@ const FALLBACK = [
 
 async function getFeatured() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://tiles-gallery-server-2.onrender.com'}/tiles?featured=true&_limit=4`, { next: { revalidate: 60 } })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://tiles-gallery-server-2.onrender.com/tiles'}/tiles?featured=true&_limit=4`, { next: { revalidate: 60 } })
     if (!res.ok) throw new Error()
     return await res.json()
   } catch { return FALLBACK }
