@@ -1,0 +1,39 @@
+{
+  "name": "tiles-gallery",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "json-server --watch data/db.json --port 5000",
+    "dev:full": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@auth/mongodb-adapter": "^3.3.0",
+    "animate.css": "^4.1.1",
+    "bcryptjs": "^2.4.3",
+    "json-server": "^0.17.4",
+    "lucide-react": "^0.394.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "next": "15.3.1",
+    "next-auth": "^4.24.7",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-fast-marquee": "^1.6.4",
+    "react-hot-toast": "^2.4.1",
+    "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
