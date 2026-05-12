@@ -10,7 +10,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![NextAuth](https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://next-auth.js.org/)
 
-**[🔗 View Live Application](https://tiles-gallery.vercel.app)** • **[🐛 Report Bug](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)** • **[✨ Request Feature](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)**
+**[🔗 View Live Application](https://tilesgallery-sigma.vercel.app/)** • **[🐛 Report Bug](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)** • **[✨ Request Feature](https://github.com/Atahar-Shihab/B13-A08-TilesGallery_Atahar-Shihab/issues)**
 
 </div>
 
@@ -140,15 +140,7 @@ tiles-gallery/
 
 ---
 
-## 📸 Interface Preview
 
-*(Drop your screenshots here to show off the clean, premium aesthetic!)*
-<br>
-![Home Page Preview](https://via.placeholder.com/800x400.png?text=Home+Page+Screenshot)
-<br>
-![Gallery Preview](https://via.placeholder.com/800x400.png?text=Gallery+Search+%26+Filter+Screenshot)
-
----
 
 ## 👨‍💻 Author
 
