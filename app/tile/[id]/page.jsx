@@ -22,7 +22,7 @@ const ALL = [
 
 async function getTile(id) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/tiles/${id}`, { next: { revalidate: 60 } })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://tiles-gallery-server-2.onrender.com'}/tiles/${id}`, { next: { revalidate: 60 } })
     if (!res.ok) throw new Error()
     return await res.json()
   } catch { return ALL.find(t => t.id === id) || null }

@@ -83,7 +83,7 @@ NEXTAUTH_SECRET=your_secret_key
 NEXTAUTH_URL=http://localhost:3000
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-NEXT_PUBLIC_API_URL=http://localhost:5000
+NEXT_PUBLIC_API_URL=https://tiles-gallery-server-2.onrender.com
 ```
 
 ### Running the App

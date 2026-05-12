@@ -7,7 +7,7 @@ import { SectionSpinner } from '@/components/Spinner'
 
 export const dynamic = 'force-dynamic'
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+const API = process.env.NEXT_PUBLIC_API_URL || 'https://tiles-gallery-server-2.onrender.com'
 const CATS = ['All', 'Ceramic', 'Marble', 'Terracotta', 'Porcelain', 'Zellige', 'Stone', 'Mosaic', 'Encaustic']
 const FALLBACK = [
   { id:'tile_001', title:'Ceramic Blue Glaze', category:'ceramic', price:45.99, currency:'USD', dimensions:'60x60 cm', material:'Ceramic', image:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', tags:['Blue','Glossy','Handmade'], inStock:true },
